@@ -1,0 +1,62 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://assets/art/tileset/hell/3.png" type="Texture" id=1]
+[ext_resource path="res://assets/art/tileset/hell/4.png" type="Texture" id=2]
+[ext_resource path="res://assets/art/tileset/hell/2.png" type="Texture" id=3]
+[ext_resource path="res://assets/art/tileset/hell/1.png" type="Texture" id=4]
+[ext_resource path="res://assets/art/tileset/hell/5.png" type="Texture" id=5]
+[ext_resource path="res://assets/art/tileset/hell/7.png" type="Texture" id=6]
+
+
+[node name="HellParallax" type="ParallaxBackground"]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="."]
+motion_scale = Vector2( 0, 0 )
+
+[node name="bg_sky" type="Sprite" parent="ParallaxLayer"]
+texture = ExtResource( 6 )
+
+[node name="ParallaxLayer6" type="ParallaxLayer" parent="."]
+motion_scale = Vector2( 0, 0 )
+motion_mirroring = Vector2( 1728, 0 )
+
+[node name="bg_sky" type="Sprite" parent="ParallaxLayer6"]
+texture = ExtResource( 5 )
+centered = false
+offset = Vector2( 0, -500 )
+
+[node name="ParallaxLayer5" type="ParallaxLayer" parent="."]
+motion_scale = Vector2( 0.1, 0.1 )
+motion_mirroring = Vector2( 1728, 0 )
+
+[node name="clouds" type="Sprite" parent="ParallaxLayer5"]
+texture = ExtResource( 2 )
+centered = false
+offset = Vector2( 0, -500 )
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="."]
+motion_scale = Vector2( 0.2, 0.1 )
+motion_mirroring = Vector2( 1728, 0 )
+
+[node name="bg_back" type="Sprite" parent="ParallaxLayer2"]
+texture = ExtResource( 1 )
+centered = false
+offset = Vector2( 0, -500 )
+
+[node name="ParallaxLayer3" type="ParallaxLayer" parent="."]
+motion_scale = Vector2( 0.35, 0.15 )
+motion_mirroring = Vector2( 1728, 0 )
+
+[node name="bg_middle" type="Sprite" parent="ParallaxLayer3"]
+texture = ExtResource( 3 )
+centered = false
+offset = Vector2( 0, -500 )
+
+[node name="ParallaxLayer4" type="ParallaxLayer" parent="."]
+motion_scale = Vector2( 0.5, 0.2 )
+motion_mirroring = Vector2( 1728, 0 )
+
+[node name="bg_front" type="Sprite" parent="ParallaxLayer4"]
+texture = ExtResource( 4 )
+centered = false
+offset = Vector2( 0, -500 )

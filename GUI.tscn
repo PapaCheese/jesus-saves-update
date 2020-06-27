@@ -1,0 +1,255 @@
+[gd_scene load_steps=17 format=2]
+
+[ext_resource path="res://assets/fonts/font.tres" type="DynamicFont" id=1]
+[ext_resource path="res://assets/art/skill/frame.png" type="Texture" id=2]
+[ext_resource path="res://assets/art/skill/Icon8.png" type="Texture" id=3]
+[ext_resource path="res://assets/art/skill/Icon4.png" type="Texture" id=4]
+[ext_resource path="res://assets/art/ui/Healthbar_empty.png" type="Texture" id=5]
+[ext_resource path="res://assets/art/halo.png" type="Texture" id=6]
+[ext_resource path="res://assets/art/weapons/goldcross.png" type="Texture" id=7]
+[ext_resource path="res://assets/art/skill/Icon5.png" type="Texture" id=8]
+[ext_resource path="res://src/UI/QuitGame.tscn" type="PackedScene" id=9]
+[ext_resource path="res://src/Spell/Divinity.gd" type="Script" id=10]
+[ext_resource path="res://assets/art/ui/Energybar_empty.png" type="Texture" id=12]
+[ext_resource path="res://assets/art/ui/Energybar_full.png" type="Texture" id=13]
+[ext_resource path="res://assets/art/ui/Healthbar_full.png" type="Texture" id=14]
+[ext_resource path="res://assets/art/skill/Icon2.png" type="Texture" id=15]
+
+[sub_resource type="Animation" id=1]
+length = 0.4
+step = 0.01
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:offset")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.08, 0.4 ),
+"transitions": PoolRealArray( 2, 0.5, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( 0, 3 ), Vector2( 0, 0 ) ]
+}
+
+[sub_resource type="StyleBoxFlat" id=2]
+bg_color = Color( 0.243137, 0.180392, 0.301961, 1 )
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 0.188235, 0.0862745, 0.231373, 1 )
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+shadow_size = 1
+shadow_offset = Vector2( -15, 15 )
+anti_aliasing = false
+
+[node name="GUI" type="CanvasLayer"]
+layer = 2
+
+[node name="Health" type="TextureProgress" parent="."]
+visible = false
+margin_left = 16.0
+margin_top = 16.0
+margin_right = 364.0
+margin_bottom = 38.0
+max_value = 2.0
+value = 1.0
+texture_under = ExtResource( 5 )
+texture_progress = ExtResource( 14 )
+__meta__ = {
+"_edit_use_anchors_": false,
+"_editor_description_": "Health"
+}
+
+[node name="Divinity" type="TextureProgress" parent="."]
+visible = false
+margin_left = 15.0
+margin_top = 37.0
+margin_right = 271.0
+margin_bottom = 77.0
+max_value = 2.0
+value = 2.0
+texture_under = ExtResource( 12 )
+texture_progress = ExtResource( 13 )
+__meta__ = {
+"_edit_use_anchors_": false,
+"_editor_description_": "Divinity"
+}
+
+[node name="Halos" type="Label" parent="."]
+visible = false
+margin_left = 42.0
+margin_top = 56.0
+margin_right = 105.0
+margin_bottom = 76.0
+custom_fonts/font = ExtResource( 1 )
+text = "0"
+script = ExtResource( 10 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite" type="Sprite" parent="Halos"]
+position = Vector2( -15, 10 )
+texture = ExtResource( 6 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Halos"]
+anims/gain = SubResource( 1 )
+
+[node name="Damage" type="Label" parent="."]
+visible = false
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_left = 28.0
+margin_top = -32.0
+margin_right = 89.0
+margin_bottom = -12.0
+custom_fonts/font = ExtResource( 1 )
+text = "Damage: 10"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SpellDamage" type="Label" parent="."]
+visible = false
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_left = 106.0
+margin_top = -32.0
+margin_right = 200.0
+margin_bottom = -12.0
+custom_fonts/font = ExtResource( 1 )
+text = "Spell Damage: 10"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LightningSpell" type="TextureRect" parent="."]
+visible = false
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_left = 27.0
+margin_top = -110.0
+margin_right = 91.0
+margin_bottom = -46.0
+texture = ExtResource( 15 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Frame" type="Sprite" parent="LightningSpell"]
+visible = false
+show_behind_parent = true
+position = Vector2( 32, 32 )
+texture = ExtResource( 2 )
+
+[node name="Label" type="Label" parent="LightningSpell"]
+margin_left = 7.0
+margin_top = 3.0
+margin_right = 47.0
+margin_bottom = 23.0
+custom_fonts/font = ExtResource( 1 )
+text = "1"
+
+[node name="FireSpell" type="TextureRect" parent="."]
+visible = false
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_left = 101.0
+margin_top = -110.0
+margin_right = 165.0
+margin_bottom = -46.0
+texture = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Frame" type="Sprite" parent="FireSpell"]
+visible = false
+show_behind_parent = true
+position = Vector2( 32, 32 )
+texture = ExtResource( 2 )
+
+[node name="Label2" type="Label" parent="FireSpell"]
+margin_left = 7.0
+margin_top = 3.0
+margin_right = 47.0
+margin_bottom = 23.0
+custom_fonts/font = ExtResource( 1 )
+text = "2"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HolySpell" type="TextureRect" parent="."]
+visible = false
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_left = 175.0
+margin_top = -110.0
+margin_right = 239.0
+margin_bottom = -46.0
+texture = ExtResource( 8 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Frame" type="Sprite" parent="HolySpell"]
+visible = false
+show_behind_parent = true
+position = Vector2( 32, 32 )
+texture = ExtResource( 2 )
+
+[node name="Label3" type="Label" parent="HolySpell"]
+margin_left = 7.0
+margin_top = 3.0
+margin_right = 47.0
+margin_bottom = 23.0
+custom_fonts/font = ExtResource( 1 )
+text = "3"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="IceSpell" type="TextureRect" parent="."]
+visible = false
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_left = 249.0
+margin_top = -110.0
+margin_right = 313.0
+margin_bottom = -46.0
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Frame" type="Sprite" parent="IceSpell"]
+visible = false
+show_behind_parent = true
+position = Vector2( 32, 32 )
+texture = ExtResource( 2 )
+
+[node name="Label4" type="Label" parent="IceSpell"]
+margin_left = 8.0
+margin_top = 3.0
+margin_right = 48.0
+margin_bottom = 23.0
+custom_fonts/font = ExtResource( 1 )
+text = "4"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="QuitGame" parent="." instance=ExtResource( 9 )]
+visible = false
+custom_styles/panel = SubResource( 2 )
+
+[node name="Lazarus" type="Sprite" parent="."]
+visible = false
+position = Vector2( 27, 88 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 7 )

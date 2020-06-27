@@ -1,0 +1,36 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://assets/Images/Toggle2.png" type="Texture" id=1]
+[ext_resource path="res://assets/Images/Toggle1.png" type="Texture" id=2]
+[ext_resource path="res://assets/fonts/m5x7_32.tres" type="DynamicFont" id=3]
+
+[sub_resource type="StyleBoxEmpty" id=4]
+
+[sub_resource type="StyleBoxEmpty" id=5]
+
+[sub_resource type="StyleBoxFlat" id=3]
+bg_color = Color( 0.6, 0.6, 0.6, 0 )
+
+[sub_resource type="StyleBoxEmpty" id=6]
+
+[sub_resource type="StyleBoxEmpty" id=7]
+
+[sub_resource type="StyleBoxEmpty" id=8]
+
+[node name="OptionsToggle" type="CheckButton"]
+margin_right = 144.0
+margin_bottom = 26.0
+size_flags_horizontal = 3
+custom_icons/off = ExtResource( 2 )
+custom_icons/on = ExtResource( 1 )
+custom_styles/hover = SubResource( 4 )
+custom_styles/pressed = SubResource( 5 )
+custom_styles/focus = SubResource( 3 )
+custom_styles/disabled = SubResource( 6 )
+custom_styles/hover_pressed = SubResource( 7 )
+custom_styles/normal = SubResource( 8 )
+custom_fonts/font = ExtResource( 3 )
+text = "Fullscreen  "
+__meta__ = {
+"_edit_use_anchors_": false
+}

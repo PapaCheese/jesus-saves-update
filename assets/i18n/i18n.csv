@@ -1,0 +1,8 @@
+keys,en,es
+CHECKPOINT_SAVED,"Checkpoint Saved","Punto de control guardado"
+L1_INTRO_1,"Jesus Christ\nhas been resurrected.\nTo save the world..","i18n-L1_INTRO_1"
+L1_TIP_MOVEMENT,"Move\nW,A,S,D / Left JoyStick / D-Pad","i18n-L1_TIP_MOVEMENT"
+L1_TIP_JUMP,"Jump\nSpace /  A","i81n-L1_TIP_JUMP"
+L1_TIP_CROSS_ATTACK,"Cross Attack\nLeft Mouse Button /  X","i18n-L1_TIP_CROSS_ATTACK"
+L1_TIP_SPELL_ATTACK,"Spell Attack\nRight Mouse Button  / Y","i18n-L1_TIP_SPELL_ATTACK"
+DAMAGE,"DamageDamage","i18n-DAMAGE"

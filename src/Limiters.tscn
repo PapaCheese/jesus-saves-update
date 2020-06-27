@@ -1,0 +1,12 @@
+[gd_scene format=2]
+
+[node name="Limiters" type="Node2D"]
+
+[node name="LeftCamLimit" type="Node2D" parent="."]
+position = Vector2( -1415, 0 )
+
+[node name="RightCamLimit" type="Node2D" parent="."]
+position = Vector2( 19950, 0 )
+
+[node name="FallLimit" type="Node2D" parent="."]
+position = Vector2( -5, 4561 )

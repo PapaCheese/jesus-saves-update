@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Open Magic Chest.wav-f43171a048417ebb539cf6a95916a1ea.sample"
+
+[deps]
+
+source_file="res://assets/audio/Open Magic Chest.wav"
+dest_files=[ "res://.import/Open Magic Chest.wav-f43171a048417ebb539cf6a95916a1ea.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

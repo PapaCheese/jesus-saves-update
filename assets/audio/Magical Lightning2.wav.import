@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Magical Lightning2.wav-6bae2d7ca3e1a7b9b8754103ecd9f481.sample"
+
+[deps]
+
+source_file="res://assets/audio/Magical Lightning2.wav"
+dest_files=[ "res://.import/Magical Lightning2.wav-6bae2d7ca3e1a7b9b8754103ecd9f481.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0
